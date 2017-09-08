@@ -117,6 +117,17 @@ public class NameUtil {
         }
     }
 
+    public static String getRandomMobile() {
+        StringBuilder mobile = new StringBuilder("1");
+        String[] arr = new String[]{"3", "5", "7", "8"};
+        Random random = new Random();
+        mobile.append(arr[random.nextInt(4)]);
+        for (int i = 0; i < 9; i++) {
+            mobile.append(random.nextInt(10));
+        }
+        return mobile.toString();
+    }
+
     public static char getRandomChar() {
         return (char) intarr[((int) (Math.random() * (1000)))];
     }
