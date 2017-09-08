@@ -16,7 +16,7 @@ public class LocationExec {
     public static void main(String[] args) throws SQLException {
         CommonDao dao = new CommonDao();
         Random random = new Random();
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 5000000; i++) {
             Location location = dao.getLocationById(random.nextInt(3151) + 1);
             String address = location.getProvincename() + location.getCityname() + location.getDistrictname();
             Integer districtid = location.getDistrictid();
